@@ -51,7 +51,7 @@ struct DeviceCard: View {
             }
             .shadow(radius: 8)
         })
-        .frame(maxHeight: 210)
+        .frame(height: 210)
         .padding(.horizontal, 20)
     }
     

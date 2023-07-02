@@ -22,7 +22,7 @@ struct DeviceListView: View {
 
                 
             }
-            .navigationTitle("Avaible Boards")
+            .navigationTitle("Available Boards")
             
             .navigationBarTitleDisplayMode(.inline)
             .toolbarColorScheme(.dark, for: .navigationBar)
