@@ -42,7 +42,9 @@ struct DeviceListView: View {
                     Spacer()
                     Button {
                         self.isRotated.toggle()
-                        // Refresh the list
+                        BlueManager.shared.resetDiscovery()
+                        BlueManager.shared.discoveryStop()
+                        BlueManager.shared.discoveryStart()
                     } label: {
                         ZStack {
                             Color.cyan

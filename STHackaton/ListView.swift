@@ -45,7 +45,7 @@ struct ListView: View {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-//                        dismiss()
+                        dismiss()
                     }, label: {
                         HStack {
                             Image(systemName: "chevron.left")
