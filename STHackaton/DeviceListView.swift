@@ -27,7 +27,7 @@ struct DeviceListView: View {
                             .foregroundColor(.gray)
                     }
                     .padding(.vertical)
-                    ForEach(discoveredNodes, id: \.deviceId){ node in
+                    ForEach(discoveredNodes, id: \.address){ node in
                         NavigationLink {
                             ListView(node: node)
                         } label: {
