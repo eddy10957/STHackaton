@@ -11,7 +11,7 @@ import SwiftUI
 struct STHackatonApp: App {
     var body: some Scene {
         WindowGroup {
-            DeviceListView().preferredColorScheme(.light)
+            ContentView().preferredColorScheme(.light)
         }
     }
 }

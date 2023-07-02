@@ -20,10 +20,11 @@ struct ArticleView: View {
                     Text(suggestion.title)
                         .font(.title)
                         .bold()
+                        .padding(.horizontal)
                     Text(suggestion.text)
                         .font(.body)
+                        .padding(.horizontal)
                 }
-                .padding()
             }
 //            .navigationTitle(suggestion.title)
 //            .navigationBarTitleDisplayMode(.inline)

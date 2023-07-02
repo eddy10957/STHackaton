@@ -66,19 +66,32 @@ struct ContentView: View {
                 }
                 
                 ForEach(vm.suggestions){ suggestion in
-                    
-                    GroupBox(){
-                        VStack(alignment: .leading){
-                            suggestion.image
-                                .resizable()
-                                .scaledToFit()
-                                .cornerRadius(8)
-                            Text(suggestion.title)
-                                .bold()
-                                
-                        }
-                        
+                    VStack(alignment: .leading) {
+                        suggestion.image
+                            .resizable()
+                            .scaledToFit()
+                        Text(suggestion.title)
+                            .bold()
+                            .padding()
                     }
+                    .cornerRadius(8)
+                    .background {
+                        Color(uiColor: .systemGray5)
+                            .cornerRadius(8)
+                    }
+                    
+//                    GroupBox(){
+//                        VStack(alignment: .leading){
+//                            suggestion.image
+//                                .resizable()
+//                                .scaledToFit()
+//                                .cornerRadius(8)
+//                            Text(suggestion.title)
+//                                .bold()
+//
+//                        }
+//
+//                    }
                     .onTapGesture {
                         self.suggestion = suggestion
                     }
