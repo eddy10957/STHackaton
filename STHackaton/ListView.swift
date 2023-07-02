@@ -14,7 +14,7 @@ struct ListView: View {
     var body: some View {
         
         VStack {
-            ScrollView(showsIndicators: true){
+            ScrollView(showsIndicators: false){
                 
                 BoardCardView()
                     .padding(3)
