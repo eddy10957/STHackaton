@@ -6,9 +6,11 @@
 //
 
 import SwiftUI
+import STBlueSDK
 
 struct DeviceListView: View {
-    
+    @State var discoveredNodes : [Node] = []
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var isRotated = false
     var animation: Animation {
         Animation.easeOut
@@ -25,12 +27,13 @@ struct DeviceListView: View {
                             .foregroundColor(.gray)
                     }
                     .padding(.vertical)
-                    NavigationLink {
-                        ListView()
-                    } label: {
-                        DeviceCard()
+                    ForEach(discoveredNodes, id: \.deviceId){ node in
+                        NavigationLink {
+                            ListView(node: node)
+                        } label: {
+                            DeviceCard(node: node)
+                        }
                     }
-                    
                 }
                 VStack {
                     Rectangle()
@@ -66,6 +69,14 @@ struct DeviceListView: View {
             .toolbarColorScheme(.dark, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbarBackground(Color.accentColor, for: .navigationBar)
+            .onAppear{
+                BlueManager.shared.discoveryStop()
+                BlueManager.shared.resetDiscovery()
+                BlueManager.shared.discoveryStart()
+            }
+            .onReceive(timer){ _ in
+                discoveredNodes = BlueManager.shared.discoveredNodes
+            }
         }
     }
 }

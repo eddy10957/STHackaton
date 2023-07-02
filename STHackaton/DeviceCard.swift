@@ -6,11 +6,15 @@
 //
 
 import SwiftUI
+import STBlueSDK
 
 struct DeviceCard: View {
+    
+    @State var node : Node
+    
     var body: some View {
         NavigationLink(destination: {
-            ListView()
+            ListView(node: node)
         }, label: {
             ZStack {
                 Color.white
@@ -25,7 +29,7 @@ struct DeviceCard: View {
                             .scaledToFit()
                             .frame(height: 60)
                     
-                        Text("STBP_04")
+                        Text(node.name!)
                             .font(.title)
                             .foregroundColor(.black)
                         Spacer()
@@ -42,10 +46,10 @@ struct DeviceCard: View {
                             .frame(width: 20)
                             .fixedSize()
                             .foregroundColor(.gray)
-                        Text("-45 dBm")
+                        Text("\(node.rssi!) dBm")
                             
                         Spacer()
-                        Text("F2:AC:25:E3:D9:EE")
+                        Text(node.address!)
                     }
                     .padding(.horizontal)
                 }
@@ -64,8 +68,8 @@ struct DeviceCard: View {
     }
 }
 
-struct DeviceCard_Previews: PreviewProvider {
-    static var previews: some View {
-        DeviceCard()
-    }
-}
+//struct DeviceCard_Previews: PreviewProvider {
+//    static var previews: some View {
+//        DeviceCard()
+//    }
+//}

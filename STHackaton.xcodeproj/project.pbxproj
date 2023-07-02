@@ -10,6 +10,7 @@
 		584265C92A511DBC00BFB9B3 /* BoardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584265C82A511DBC00BFB9B3 /* BoardCardView.swift */; };
 		584265CB2A511E2300BFB9B3 /* DemoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584265CA2A511E2300BFB9B3 /* DemoCardView.swift */; };
 		584265CD2A51240600BFB9B3 /* Styling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584265CC2A51240600BFB9B3 /* Styling.swift */; };
+		584265D42A513CD200BFB9B3 /* STBlueSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 584265D32A513CD200BFB9B3 /* STBlueSDK */; };
 		AAF29E972A50E63C00B3FD3C /* STHackatonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF29E962A50E63C00B3FD3C /* STHackatonApp.swift */; };
 		AAF29E992A50E63C00B3FD3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF29E982A50E63C00B3FD3C /* ContentView.swift */; };
 		AAF29E9B2A50E63D00B3FD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF29E9A2A50E63D00B3FD3C /* Assets.xcassets */; };
@@ -27,6 +28,8 @@
 		584265C82A511DBC00BFB9B3 /* BoardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCardView.swift; sourceTree = "<group>"; };
 		584265CA2A511E2300BFB9B3 /* DemoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCardView.swift; sourceTree = "<group>"; };
 		584265CC2A51240600BFB9B3 /* Styling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styling.swift; sourceTree = "<group>"; };
+		584265CF2A513C2200BFB9B3 /* Packages */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Packages; sourceTree = "<group>"; };
+		584265D22A513CAA00BFB9B3 /* STBlueSDK_iOS */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = STBlueSDK_iOS; path = Packages/STBlueSDK_iOS; sourceTree = "<group>"; };
 		AAF29E932A50E63C00B3FD3C /* STHackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STHackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF29E962A50E63C00B3FD3C /* STHackatonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STHackatonApp.swift; sourceTree = "<group>"; };
 		AAF29E982A50E63C00B3FD3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,17 +49,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				584265D42A513CD200BFB9B3 /* STBlueSDK in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		584265CE2A513C2200BFB9B3 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				584265CF2A513C2200BFB9B3 /* Packages */,
+				584265D22A513CAA00BFB9B3 /* STBlueSDK_iOS */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		584265D12A513C6700BFB9B3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AAF29E8A2A50E63C00B3FD3C = {
 			isa = PBXGroup;
 			children = (
+				584265CE2A513C2200BFB9B3 /* Packages */,
 				AAF29E952A50E63C00B3FD3C /* STHackaton */,
 				AAF29E942A50E63C00B3FD3C /* Products */,
+				584265D12A513C6700BFB9B3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +135,9 @@
 			dependencies = (
 			);
 			name = STHackaton;
+			packageProductDependencies = (
+				584265D32A513CD200BFB9B3 /* STBlueSDK */,
+			);
 			productName = STHackaton;
 			productReference = AAF29E932A50E63C00B3FD3C /* STHackaton.app */;
 			productType = "com.apple.product-type.application";
@@ -379,6 +404,13 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		584265D32A513CD200BFB9B3 /* STBlueSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = STBlueSDK;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AAF29E8B2A50E63C00B3FD3C /* Project object */;
 }

@@ -6,17 +6,20 @@
 //
 
 import SwiftUI
-
+import STBlueSDK
 
 
 struct ListView: View {
-    @Environment(\.dismiss) var dismiss
+    
+    @State var node : Node
+//    @Environment(\.dismiss) var dismiss
+
     var body: some View {
         
         VStack {
             ScrollView(showsIndicators: false){
                 
-                BoardCardView()
+                BoardCardView(node: node)
                     .padding(3)
                     .shadow(radius: 3)
                     .ignoresSafeArea(.all)
@@ -34,11 +37,15 @@ struct ListView: View {
                 
             }
             .padding()
+            .onAppear{
+                BlueManager.shared.connect(node)
+                BlueManager.shared.discoveryStop()
+            }
             
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button(action: {
-                        dismiss()
+//                        dismiss()
                     }, label: {
                         HStack {
                             Image(systemName: "chevron.left")
@@ -103,8 +110,8 @@ struct ListView: View {
       }
 }
 
-struct ListView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListView()
-    }
-}
+//struct ListView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListView()
+//    }
+//}

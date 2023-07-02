@@ -6,8 +6,10 @@
 //
 
 import SwiftUI
+import STBlueSDK
 
 struct BoardCardView: View {
+    @State var node : Node
     var body: some View {
         ZStack{
             
@@ -15,7 +17,7 @@ struct BoardCardView: View {
                 .foregroundColor(.white)
             VStack{
                 HStack {
-                    Text("STBP_04")
+                    Text(node.name!)
                     Spacer()
                 }
                 .padding(.leading)
@@ -32,8 +34,8 @@ struct BoardCardView: View {
     }
 }
 
-struct BoardCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        BoardCardView()
-    }
-}
+//struct BoardCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BoardCardView()
+//    }
+//}
