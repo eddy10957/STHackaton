@@ -12,7 +12,7 @@ struct ArticleView: View {
     var body: some View {
         NavigationView{
             
-            ScrollView{
+            ScrollView(showsIndicators: false){
                 VStack(alignment: .leading){
                     suggestion.image
                         .resizable()
@@ -25,8 +25,8 @@ struct ArticleView: View {
                 }
                 .padding()
             }
-            .navigationTitle(suggestion.title)
-            .navigationBarTitleDisplayMode(.inline)
+//            .navigationTitle(suggestion.title)
+//            .navigationBarTitleDisplayMode(.inline)
         }
         
     }

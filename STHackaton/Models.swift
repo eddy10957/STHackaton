@@ -42,14 +42,15 @@ struct Suggestion : Identifiable{
 
 public enum Demo: String, CaseIterable, Codable {
     
-    case enviromental
-    case plotData
-    case boardConfiguration
-    case flow
-    case gestureNavigation
-    case textualMonitor
-    case cloudLogging
-    case battery
+case walking
+case enviromental
+case plotData
+case boardConfiguration
+case flow
+case gestureNavigation
+case textualMonitor
+case cloudLogging
+case battery
     
 }
 
@@ -57,6 +58,8 @@ public extension Demo {
     
     var color: Color {
         switch self {
+        case .walking:
+            return .blue
         case .enviromental:
             return .yellow
         case .plotData:
@@ -78,6 +81,8 @@ public extension Demo {
     
     var title: String {
         switch self {
+        case .walking:
+            return "Walking Rehabilitation"
         case .enviromental:
             return "Enviromental"
         case .plotData:
@@ -99,6 +104,8 @@ public extension Demo {
     
     var description: String {
         switch self {
+        case .walking:
+            return "Keep track of your rehabilitation journey"
         case .enviromental:
             return "Display available temperature, pressure, humidity and Lux sensors values"
         case .plotData:
@@ -120,7 +127,8 @@ public extension Demo {
     
     var imageName: String {
         switch self {
-            
+        case .walking:
+            return "demo_pedometer"
         case .enviromental:
             return "demo_environmental"
         case .plotData:
@@ -140,4 +148,6 @@ public extension Demo {
         }
         
     }
+    
+    
 }

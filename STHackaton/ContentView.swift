@@ -17,12 +17,14 @@ import Charts
 
 struct ContentView: View {
     
+    @Environment(\.dismiss) var dismiss
+
     @StateObject var vm : ViewModel = ViewModel()
     @State var suggestion :  Suggestion? = nil
     var body: some View {
         
-        NavigationView{
-            ScrollView {
+        VStack{
+            ScrollView(showsIndicators: false) {
                 GroupBox("Your Progress"){
                     Chart{
                         ForEach(vm.data.filter({$0.patient == "Normal Person"})) { data in
@@ -94,6 +96,24 @@ struct ContentView: View {
         .sheet(item: $suggestion, content: { suggestion in
             ArticleView(suggestion: suggestion)
         })
+        .toolbar {
+            ToolbarItem(placement: .navigationBarLeading) {
+                Button(action: {
+                    dismiss()
+                }, label: {
+                    HStack {
+                        Image(systemName: "chevron.left")
+                    }
+                    .foregroundColor(.white)
+                })
+            }
+            ToolbarItem(placement: .principal) {
+                Text("Walking Rehabilitation")
+                    .foregroundColor(.white)
+            }
+        }
+        .navigationBarBackButtonHidden(true)
+        .modifier(ColoredNavBar())
         }
     
 }

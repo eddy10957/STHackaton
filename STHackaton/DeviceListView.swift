@@ -12,8 +12,13 @@ struct DeviceListView: View {
     var body: some View {
         NavigationView{
             ScrollView{
+                VStack {
                 Text("Welcome to ST BLE Sensor App!")
+                    .foregroundColor(.gray)
                 Text("Click on a board below to access it's demos.")
+                    .foregroundColor(.gray)
+            }
+                    .padding(.vertical)
                 NavigationLink {
                     ListView()
                 } label: {

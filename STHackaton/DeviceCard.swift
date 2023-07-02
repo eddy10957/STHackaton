@@ -23,12 +23,14 @@ struct DeviceCard: View {
                         Image("sensor")
                             .resizable()
                             .scaledToFit()
-                            .frame(height: 80)
+                            .frame(height: 60)
                     
                         Text("STBP_04")
                             .font(.title)
                             .foregroundColor(.black)
                         Spacer()
+                        Image(systemName: "pin")
+                            .padding(.bottom, 70)
                             
                     }
                     .padding(.horizontal)
@@ -46,13 +48,12 @@ struct DeviceCard: View {
                         Text("F2:AC:25:E3:D9:EE")
                     }
                     .padding(.horizontal)
-                    .padding(.vertical)
                 }
             }
             .shadow(radius: 8)
         })
-        .frame(height: 210)
-        .padding(.horizontal, 20)
+        .frame(height: 170)
+        .padding(.horizontal, 10)
     }
     
     private var divider: some View {

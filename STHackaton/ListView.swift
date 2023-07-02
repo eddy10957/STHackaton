@@ -23,7 +23,13 @@ struct ListView: View {
                     .padding(.bottom)
                 
                 ForEach(Demo.allCases, id: \.self) { demo in
-                    DemoCardView(demo: demo)
+                    NavigationLink {
+                        view(for: demo)
+                    } label: {
+                        DemoCardView(demo: demo)
+                    }
+
+                    
                 }
                 
             }
@@ -69,6 +75,32 @@ struct ListView: View {
         
         
     }
+    
+    @ViewBuilder
+      func view(for destination: Demo?) -> some View {
+        switch destination {
+        case .some(.walking):
+          ContentView()
+        case .some(.enviromental):
+            EmptyView()
+        case .some(.plotData):
+            EmptyView()
+        case .some(.boardConfiguration):
+            EmptyView()
+        case .some(.flow):
+            EmptyView()
+        case .some(.gestureNavigation):
+            EmptyView()
+        case .some(.textualMonitor):
+            EmptyView()
+        case .some(.cloudLogging):
+            EmptyView()
+        case .some(.battery):
+            EmptyView()
+        default:
+          EmptyView()
+        }
+      }
 }
 
 struct ListView_Previews: PreviewProvider {
