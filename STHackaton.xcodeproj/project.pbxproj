@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		584265C92A511DBC00BFB9B3 /* BoardCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584265C82A511DBC00BFB9B3 /* BoardCardView.swift */; };
+		584265CB2A511E2300BFB9B3 /* DemoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584265CA2A511E2300BFB9B3 /* DemoCardView.swift */; };
 		AAF29E972A50E63C00B3FD3C /* STHackatonApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF29E962A50E63C00B3FD3C /* STHackatonApp.swift */; };
 		AAF29E992A50E63C00B3FD3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF29E982A50E63C00B3FD3C /* ContentView.swift */; };
 		AAF29E9B2A50E63D00B3FD3C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAF29E9A2A50E63D00B3FD3C /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		584265C82A511DBC00BFB9B3 /* BoardCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardCardView.swift; sourceTree = "<group>"; };
+		584265CA2A511E2300BFB9B3 /* DemoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCardView.swift; sourceTree = "<group>"; };
 		AAF29E932A50E63C00B3FD3C /* STHackaton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = STHackaton.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAF29E962A50E63C00B3FD3C /* STHackatonApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STHackatonApp.swift; sourceTree = "<group>"; };
 		AAF29E982A50E63C00B3FD3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				AAF29EA62A50F7AE00B3FD3C /* ViewModel.swift */,
 				AAF29EAA2A50FDA400B3FD3C /* ArticleView.swift */,
 				AAF8BDB32A510322002F225E /* ListView.swift */,
+				584265C82A511DBC00BFB9B3 /* BoardCardView.swift */,
+				584265CA2A511E2300BFB9B3 /* DemoCardView.swift */,
 				AAF8BDB52A51032F002F225E /* DeviceListView.swift */,
 				AAF8BDB72A51035A002F225E /* DeviceCard.swift */,
 				AAF29E9A2A50E63D00B3FD3C /* Assets.xcassets */,
@@ -165,7 +171,9 @@
 				AAF8BDB82A51035A002F225E /* DeviceCard.swift in Sources */,
 				AAF29EA72A50F7AE00B3FD3C /* ViewModel.swift in Sources */,
 				AAF29E972A50E63C00B3FD3C /* STHackatonApp.swift in Sources */,
+				584265CB2A511E2300BFB9B3 /* DemoCardView.swift in Sources */,
 				AAF8BDB62A51032F002F225E /* DeviceListView.swift in Sources */,
+				584265C92A511DBC00BFB9B3 /* BoardCardView.swift in Sources */,
 				AAF29EA92A50F80700B3FD3C /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

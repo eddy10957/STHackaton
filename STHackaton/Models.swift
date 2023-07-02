@@ -38,3 +38,106 @@ struct Suggestion : Identifiable{
         self.image = image
     }
 }
+
+
+public enum Demo: String, CaseIterable, Codable {
+    
+    case enviromental
+    case plotData
+    case boardConfiguration
+    case flow
+    case gestureNavigation
+    case textualMonitor
+    case cloudLogging
+    case battery
+    
+}
+
+public extension Demo {
+    
+    var color: Color {
+        switch self {
+        case .enviromental:
+            return .yellow
+        case .plotData:
+            return .blue
+        case .boardConfiguration:
+            return .yellow
+        case .flow:
+            return .blue
+        case .gestureNavigation:
+            return .yellow
+        case .textualMonitor:
+            return .blue
+        case .cloudLogging:
+            return .yellow
+        case .battery:
+            return .blue
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .enviromental:
+            return "Enviromental"
+        case .plotData:
+            return "Plot Data"
+        case .boardConfiguration:
+            return "Board Configuration"
+        case .flow:
+            return "Flow"
+        case .gestureNavigation:
+            return "Gesture Navigation"
+        case .textualMonitor:
+            return "Textual Monitor"
+        case .cloudLogging:
+            return "Cloud Logging"
+        case .battery:
+            return "Battery"
+        }
+    }
+    
+    var description: String {
+        switch self {
+        case .enviromental:
+            return "Display available temperature, pressure, humidity and Lux sensors values"
+        case .plotData:
+            return "Display the sensors' value on a configurable plot"
+        case .boardConfiguration:
+            return "Advance board extended configuration trough json-like messages"
+        case .flow:
+            return "Create a new application"
+        case .gestureNavigation:
+            return "Recognition of gesture navigation using sensor"
+        case .textualMonitor:
+            return "Show in a textual way the values received and parsed from any bluetooth characteristics"
+        case .cloudLogging:
+            return "Connect the voard to different cloud providers"
+        case .battery:
+            return "Display board RSSI and Battery information if available"
+        }
+    }
+    
+    var imageName: String {
+        switch self {
+            
+        case .enviromental:
+            return "demo_environmental"
+        case .plotData:
+            return "demo_charts"
+        case .boardConfiguration:
+            return "ext_config"
+        case .flow:
+            return "demo_flow"
+        case .gestureNavigation:
+            return "demo_gesture_navigation"
+        case .textualMonitor:
+            return "demo_textual"
+        case .cloudLogging:
+            return "demo_cloud"
+        case .battery:
+            return "demo_battery"
+        }
+        
+    }
+}
