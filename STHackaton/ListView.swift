@@ -52,7 +52,7 @@ struct ListView: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        dismiss()
+                        
                     }, label: {
                         Image("img_edit")
                             .renderingMode(.template)

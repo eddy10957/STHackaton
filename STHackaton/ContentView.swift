@@ -9,12 +9,6 @@
 import SwiftUI
 import Charts
 
-
-
-
-
-
-
 struct ContentView: View {
     
     @Environment(\.dismiss) var dismiss
