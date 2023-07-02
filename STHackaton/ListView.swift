@@ -12,7 +12,7 @@ import STBlueSDK
 struct ListView: View {
     
     @State var node : Node
-//    @Environment(\.dismiss) var dismiss
+    @SwiftUI.Environment(\.dismiss) var dismiss
 
     var body: some View {
         
